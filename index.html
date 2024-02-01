@@ -7,44 +7,65 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon-32x32.png">
     <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Multi-step form</title>
 </head>
 
 <body>
-<section class="wrapper">
-<div class="steps">
-    <div class="step-wrapper">
-    <div class="step-one">
-        <a><span>1</span></a>
-        <span class="number">STEP 1</span>
-        <span class="cont">YOUR INFO</span>
-    </div>
-    <div class="step-two">
-        <a><span>2</span></a>
-        <span class="number">STEP 2</span>
-        <span class="cont">SELECT PLAN</span>
-    </div>
-    <div class="step-three">
-        <a><span>3</span></a>
-        <span class="number">STEP 3</span>
-        <span class="cont">ADD-ONS</span>
-    </div>
-    <div class="step-four">
-        <a><span>4</span></a>
-        <span class="number">STEP 4</span>
-        <span class="cont">SUMMARY</span>
-    </div>
-    </div>
-</div>
-<div class="form-content">
-    <span>Personal info</span>
-    <p>Please provide your name, email address, and phone number.</p>
-</div>
-<div class="footer"></div>
-</section>
+    <section class="wrapper">
+        <div class="steps">
+            <div class="step-wrapper">
+                <div class="step-one">
+                    <a><span>1</span></a>
+                    <span class="number">STEP 1</span>
+                    <span class="cont">YOUR INFO</span>
+                </div>
+                <div class="step-two">
+                    <a><span>2</span></a>
+                    <span class="number">STEP 2</span>
+                    <span class="cont">SELECT PLAN</span>
+                </div>
+                <div class="step-three">
+                    <a><span>3</span></a>
+                    <span class="number">STEP 3</span>
+                    <span class="cont">ADD-ONS</span>
+                </div>
+                <div class="step-four">
+                    <a><span>4</span></a>
+                    <span class="number">STEP 4</span>
+                    <span class="cont">SUMMARY</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-content">
+            <div class="first-info">
+                <h1>Personal info</h1>
+                <p>Please provide your name, email address, and phone number.</p>
+                <div class="name-input">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="e.g. Stephen King">
+                </div>
+                <div class="email-input">
+                    <label for="email-add">Email Address</label>
+                    <input id="email-add" type="text" placeholder="e.g. stephenking@lorem.com">
+                </div>
+                <div class="phone-input">
+                    <label for="phone-num">Phone Number</label>
+                    <input id="phone-num" type="text" placeholder="e.g. +1 234 567 890">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="button-wrapper">
+                <button class="back-step">Go Back</button>
+                <button class="footer-step">Next Step</button>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -52,4 +73,3 @@
 </body>
 
 </html>
-

@@ -9,6 +9,7 @@
     text-align: center;
     margin-right: 15px;
     background-color: hsl(206, 94%, 87%);
+
     span {
         vertical-align: -webkit-baseline-middle;
         font-weight: 700;
@@ -16,7 +17,7 @@
 }
 
 ///////////
- 
+
 
 body {
     margin: unset;
@@ -60,7 +61,6 @@ body {
 }
 
 .footer {
-    background-color: green;
     height: 100px;
 }
 
@@ -76,33 +76,70 @@ body {
     }
 }
 
-.step-one,.step-two,
+.step-one,
+.step-two,
 .step-three,
 .step-four {
     a {
         @include step-number()
-        }
     }
+}
 
-    .step-two,
-    .step-three,
-    .step-four{
-        a {
-            background-color: unset;
-            
-            span{
-                color: hsl(231, 100%, 99%);
-            }
+.step-two,
+.step-three,
+.step-four {
+    a {
+        background-color: unset;
+
+        span {
+            color: hsl(231, 100%, 99%);
         }
     }
+}
 
 .number {
     font-size: 14px;
     color: hsl(231, 11%, 63%);
 }
+
 .cont {
     font-weight: 700;
     color: hsl(231, 100%, 99%);
     letter-spacing: 1px;
 }
 
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+    .back-step {
+        font-weight: 700;
+        color: hsl(231, 11%, 63%);
+        background: none;
+        font-family: "Ubuntu", sans-serif;
+        border: none;
+        font-size: 16px;
+        letter-spacing: 1px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .footer-step {
+        padding: 14px 20px;
+        color: hsl(229, 24%, 87%);
+        background-color: hsl(213, 96%, 18%);
+        letter-spacing: 1px;
+        outline: none;
+        border: none;
+        border-radius: 7px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 16px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
