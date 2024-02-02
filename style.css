@@ -127,4 +127,5 @@ body {
 }
 .button-wrapper .footer-step:hover {
   cursor: pointer;
+  color: hsl(231, 100%, 99%);
 }/*# sourceMappingURL=style.css.map */
