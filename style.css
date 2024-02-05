@@ -99,6 +99,26 @@ body {
   margin-left: 55px;
 }
 
+.add-wrapper .add-first {
+  display: flex;
+  border: 1px solid;
+  height: 90px;
+}
+.add-wrapper .add-first input {
+  margin: 32px 27px;
+  width: 23px;
+  height: 23px;
+}
+.add-wrapper .add-first .add-text h3 {
+  margin-bottom: 7px;
+}
+.add-wrapper .add-first .add-text p {
+  font-size: 16px;
+}
+.add-wrapper .add-first span {
+  margin: 32px 25px 0 auto;
+}
+
 .step-one,
 .step-two,
 .step-three,
