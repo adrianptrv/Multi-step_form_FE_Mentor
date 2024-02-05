@@ -11,6 +11,7 @@ body {
   gap: 0px;
   width: 60dvw;
   grid-template-columns: 1fr 5fr;
+  grid-template-rows: 85% 15%;
   margin-top: 7%;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
@@ -33,13 +34,69 @@ body {
   margin: 15px 0 0 35px;
 }
 
-.form-content {
-  background-color: red;
-  height: 300px;
+.form-content .first-info {
+  width: calc(100% - 142px);
+  margin-left: 55px;
+}
+.form-content .first-info h1 {
+  font-size: 33px;
+  margin: auto;
+  margin-top: 50px;
+}
+.form-content .first-info p {
+  margin-top: 7px;
+  margin-bottom: 35px;
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+.form-content .first-info .name-input label {
+  display: block;
+}
+.form-content .first-info .phone-input label {
+  display: block;
+}
+.form-content .first-info .email-input label {
+  display: block;
+}
+.form-content .first-info .name-input,
+.form-content .first-info .phone-input,
+.form-content .first-info .email-input {
+  margin-top: 20px;
+}
+.form-content .first-info .name-input label,
+.form-content .first-info .phone-input label,
+.form-content .first-info .email-input label {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 5px;
+}
+.form-content .first-info .name-input input,
+.form-content .first-info .phone-input input,
+.form-content .first-info .email-input input {
+  width: 100%;
+  height: 45px;
+  font-family: "Ubuntu", sans-serif;
+  padding-left: 10px;
+  border-radius: 8px;
+  border: 1px solid hsl(231, 11%, 63%);
+  font-size: 16px;
+  font-weight: bold;
+  color: hsl(213, 96%, 18%);
+  outline: none;
+}
+.form-content .first-info .name-input input:hover,
+.form-content .first-info .phone-input input:hover,
+.form-content .first-info .email-input input:hover {
+  cursor: pointer;
+}
+.form-content .first-info .name-input input:focus,
+.form-content .first-info .phone-input input:focus,
+.form-content .first-info .email-input input:focus {
+  border: 2px solid hsl(243, 100%, 62%);
+  cursor: text;
 }
 
 .footer {
-  height: 100px;
+  margin-left: 55px;
 }
 
 .step-one,
@@ -100,7 +157,7 @@ body {
 .button-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: calc(100% - 73px);
 }
 .button-wrapper .back-step {
   font-weight: 700;

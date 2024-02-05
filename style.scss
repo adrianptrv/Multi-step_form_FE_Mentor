@@ -16,6 +16,37 @@
     }
 }
 
+@mixin info-fields {
+    margin-top: 20px;
+
+    label {
+        color: hsl(213, 96%, 18%);
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        height: 45px;
+        font-family: "Ubuntu", sans-serif;
+        padding-left: 10px;
+        border-radius: 8px;
+        border: 1px solid hsl(231, 11%, 63%);
+        font-size: 16px;
+        font-weight: bold;
+        color: hsl(213, 96%, 18%);
+        outline: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            border: 2px solid hsl(243, 100%, 62%);
+            cursor: text;
+        }
+    }
+}
+
 ///////////
 
 
@@ -32,6 +63,7 @@ body {
     gap: 0px;
     width: 60dvw;
     grid-template-columns: 1fr 5fr;
+    grid-template-rows: 85% 15%;
     margin-top: 7%;
     border-radius: 10px;
     background-color: hsl(0, 0%, 100%);
@@ -56,12 +88,55 @@ body {
 }
 
 .form-content {
-    background-color: red;
-    height: 300px;
+
+    .first-info {
+        width: calc(100% - 142px);
+        margin-left: 55px;
+
+        h1 {
+            font-size: 33px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        p {
+            margin-top: 7px;
+            margin-bottom: 35px;
+            font-size: 14px;
+            color: hsl(231, 11%, 63%);
+        }
+
+        .name-input {
+            label {
+                display: block;
+            }
+        }
+
+        .phone-input {
+            label {
+                display: block;
+            }
+        }
+
+        .email-input {
+            label {
+                display: block;
+            }
+        }
+
+
+        .name-input,
+        .phone-input,
+        .email-input {
+            @include info-fields
+        }
+
+
+    }
 }
 
 .footer {
-    height: 100px;
+    margin-left: 55px;
 }
 
 .step-one,
@@ -111,7 +186,7 @@ body {
 .button-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: calc(100% - 73px);
 
     .back-step {
         font-weight: 700;
