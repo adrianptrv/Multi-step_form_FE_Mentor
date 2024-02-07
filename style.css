@@ -9,7 +9,7 @@ body {
   margin: auto;
   display: grid;
   gap: 0px;
-  width: 60dvw;
+  width: 70dvw;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 85% 15%;
   margin-top: 7%;
@@ -35,19 +35,30 @@ body {
 }
 
 .form-content .first-info {
-  width: calc(100% - 142px);
-  margin-left: 55px;
+  margin-top: 20px;
 }
-.form-content .first-info h1 {
-  font-size: 33px;
-  margin: auto;
-  margin-top: 50px;
+.form-content .first-info label {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 5px;
 }
-.form-content .first-info p {
-  margin-top: 7px;
-  margin-bottom: 35px;
-  font-size: 14px;
-  color: hsl(231, 11%, 63%);
+.form-content .first-info input {
+  width: 100%;
+  height: 45px;
+  font-family: "Ubuntu", sans-serif;
+  padding-left: 10px;
+  border-radius: 8px;
+  border: 1px solid hsl(231, 11%, 63%);
+  font-size: 16px;
+  font-weight: bold;
+  color: hsl(213, 96%, 18%);
+  outline: none;
+}
+.form-content .first-info input:hover {
+  cursor: pointer;
+}
+.form-content .first-info input:focus {
+  border: 2px solid hsl(243, 100%, 62%);
+  cursor: text;
 }
 .form-content .first-info .name-input label {
   display: block;
@@ -94,29 +105,275 @@ body {
   border: 2px solid hsl(243, 100%, 62%);
   cursor: text;
 }
+.form-content .second-info {
+  width: calc(100% - 142px);
+  margin-left: 55px;
+  width: calc(100% - 130px);
+}
+.form-content .second-info h1 {
+  font-size: 33px;
+  margin: auto;
+  margin-top: 50px;
+  color: hsl(213, 96%, 18%);
+}
+.form-content .second-info .sub-title {
+  margin-top: 7px;
+  margin-bottom: 35px;
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+@media only screen and (max-width: 1032px) {
+  .form-content .second-info .sub-title {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1020px) and (max-width: 1050px) {
+  .form-content .second-info {
+    width: calc(100% - 110px);
+  }
+}
+
+.third-info {
+  width: calc(100% - 142px);
+  margin-left: 55px;
+  width: calc(100% - 128px);
+}
+.third-info h1 {
+  font-size: 33px;
+  margin: auto;
+  margin-top: 50px;
+  color: hsl(213, 96%, 18%);
+}
+.third-info .sub-title {
+  margin-top: 7px;
+  margin-bottom: 35px;
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+@media only screen and (max-width: 1032px) {
+  .third-info .sub-title {
+    margin-bottom: 20px;
+  }
+}
+
+.fourth-info {
+  width: calc(100% - 142px);
+  margin-left: 55px;
+}
+.fourth-info h1 {
+  font-size: 33px;
+  margin: auto;
+  margin-top: 50px;
+  color: hsl(213, 96%, 18%);
+}
+.fourth-info .sub-title {
+  margin-top: 7px;
+  margin-bottom: 35px;
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+@media only screen and (max-width: 1032px) {
+  .fourth-info .sub-title {
+    margin-bottom: 20px;
+  }
+}
 
 .footer {
   margin-left: 55px;
 }
 
-.add-wrapper .add-first {
+.plan-holder {
   display: flex;
-  border: 1px solid;
-  height: 90px;
 }
-.add-wrapper .add-first input {
-  margin: 32px 27px;
-  width: 23px;
-  height: 23px;
+.plan-holder .arcade-plan,
+.plan-holder .advanced-plan,
+.plan-holder .pro-plan {
+  width: 40%;
+  border-radius: 10px;
+  border: 2px solid hsl(229, 24%, 87%);
 }
-.add-wrapper .add-first .add-text h3 {
-  margin-bottom: 7px;
+.plan-holder .arcade-plan:hover,
+.plan-holder .advanced-plan:hover,
+.plan-holder .pro-plan:hover {
+  border-color: hsl(243, 100%, 62%);
+  cursor: pointer;
 }
-.add-wrapper .add-first .add-text p {
+.plan-holder .arcade-plan img,
+.plan-holder .advanced-plan img,
+.plan-holder .pro-plan img {
+  margin: 20px 0 0 15px;
+}
+.plan-holder .arcade-plan h4,
+.plan-holder .advanced-plan h4,
+.plan-holder .pro-plan h4 {
+  padding-right: 10px;
+  margin: 34px 0 10px 15px;
+  color: hsl(213, 96%, 18%);
+}
+.plan-holder .arcade-plan span,
+.plan-holder .advanced-plan span,
+.plan-holder .pro-plan span {
+  padding-right: 10px;
+  margin-left: 15px;
+  color: hsl(231, 11%, 63%);
+}
+.plan-holder .arcade-plan p,
+.plan-holder .advanced-plan p,
+.plan-holder .pro-plan p {
+  margin: 10px 10px 20px 15px;
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+}
+.plan-holder .advanced-plan {
+  margin: 0px 25px;
+}
+
+.mon-year {
+  text-align: center;
+  border-radius: 10px;
+  background-color: hsl(217, 100%, 97%);
+  height: 60px;
   font-size: 16px;
+  margin-top: 20px;
 }
-.add-wrapper .add-first span {
+.mon-year .mon-year-text {
+  padding-top: 19px;
+}
+.mon-year .mon-year-text .mon-text {
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+}
+.mon-year .mon-year-text .mon-year {
+  color: hsl(231, 11%, 63%);
+  font-weight: bold;
+}
+.mon-year .mon-year-text .switch {
+  position: relative;
+  display: inline;
+  margin: 0 49px 0 15px;
+}
+.mon-year .mon-year-text .switch label {
+  width: 55px;
+  height: 23px;
+  background-color: #999;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  border-radius: 50px;
+}
+.mon-year .mon-year-text .switch input[type=checkbox] {
+  visibility: hidden;
+}
+.mon-year .mon-year-text .switch label:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: 500ms;
+  background-color: white;
+}
+.mon-year .mon-year-text .switch .look:checked + label:after {
+  left: 32px;
+}
+.mon-year .mon-year-text .switch .look:checked + label {
+  background-color: hsl(213, 96%, 18%);
+}
+
+.add-wrapper label {
+  -webkit-tap-highlight-color: transparent;
+}
+.add-wrapper label:nth-child(2) .add-block,
+.add-wrapper label:nth-child(3) .add-block {
+  margin-top: 15px;
+}
+.add-wrapper .add-block {
+  display: flex;
+  height: 75px;
+  border: 2px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+}
+@media only screen and (max-width: 1070px) {
+  .add-wrapper .add-block {
+    height: 85px;
+  }
+}
+.add-wrapper .add-block:hover {
+  border-color: hsl(243, 100%, 62%);
+  cursor: pointer;
+}
+.add-wrapper .add-block input {
+  margin: 28px 23px;
+  width: 20px;
+  height: 20px;
+}
+.add-wrapper .add-block .add-text h3 {
+  margin-bottom: 7px;
+  font-size: 16px;
+  color: hsl(213, 96%, 18%);
+}
+.add-wrapper .add-block .add-text p {
+  font-size: 14px;
+}
+.add-wrapper .add-block span {
   margin: 32px 25px 0 auto;
+}
+
+.summ-wrapper {
+  background-color: yellow;
+  padding: 1px 20px;
+}
+.summ-wrapper .summ-head p {
+  font-size: 16px;
+  margin-bottom: -15px;
+  font-weight: bold;
+  color: hsl(213, 96%, 18%);
+}
+.summ-wrapper .summ-head a {
+  color: hsl(231, 11%, 63%);
+  margin-top: 14px;
+  font-size: 14px;
+}
+.summ-wrapper .summ-head span {
+  float: right;
+  margin-top: -15px;
+  font-weight: bold;
+  color: hsl(213, 96%, 18%);
+}
+.summ-wrapper .summ-line1 {
+  margin-top: 20px;
+  border-top: 1px solid;
+  padding-top: 5px;
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+}
+.summ-wrapper .summ-line1 span {
+  float: right;
+  margin-top: -31px;
+}
+.summ-wrapper .summ-line2 {
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+}
+.summ-wrapper .summ-line2 span {
+  float: right;
+  margin-top: -31px;
+}
+
+.summ-total {
+  padding: 1px 18px;
+}
+.summ-total p {
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+}
+.summ-total span {
+  float: right;
+  margin-top: -32px;
+  color: hsl(243, 100%, 62%);
+  font-weight: bolder;
 }
 
 .step-one,
