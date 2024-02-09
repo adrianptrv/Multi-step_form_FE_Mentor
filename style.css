@@ -16,6 +16,15 @@ body {
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
 }
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    margin: unset;
+    display: unset;
+    width: unset;
+    margin-top: unset;
+    border-radius: unset;
+  }
+}
 
 .steps {
   height: 530px;
@@ -26,6 +35,16 @@ body {
   background-size: contain;
   margin: 15px 0px 15px 15px;
 }
+@media only screen and (max-width: 1024px) {
+  .steps {
+    background-image: url(images/bg-sidebar-mobile.svg);
+    min-width: unset;
+    margin: unset;
+    background-size: cover;
+    background-position: center;
+    height: 172px;
+  }
+}
 .steps .step-wrapper {
   display: flex;
   flex-direction: column;
@@ -33,41 +52,196 @@ body {
   height: 50%;
   margin: 15px 0 0 35px;
 }
+@media only screen and (max-width: 1024px) {
+  .steps .step-wrapper {
+    flex-direction: unset;
+    height: unset;
+    margin: unset;
+    justify-content: center;
+  }
+}
 
-.form-content .first-info {
-  margin-top: 20px;
+.step-one,
+.step-two,
+.step-three,
+.step-four {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
-.form-content .first-info label {
-  color: hsl(213, 96%, 18%);
-  margin-bottom: 5px;
+@media only screen and (max-width: 1024px) {
+  .step-one,
+  .step-two,
+  .step-three,
+  .step-four {
+    grid-template-columns: 40px;
+    margin-top: 25px;
+  }
 }
-.form-content .first-info input {
-  width: 100%;
-  height: 45px;
+.step-one a,
+.step-two a,
+.step-three a,
+.step-four a {
+  grid-row: 1/3;
+}
+@media only screen and (max-width: 1024px) {
+  .step-one .number,
+  .step-one .cont,
+  .step-two .number,
+  .step-two .cont,
+  .step-three .number,
+  .step-three .cont,
+  .step-four .number,
+  .step-four .cont {
+    display: none;
+  }
+}
+
+.step-one a,
+.step-two a,
+.step-three a,
+.step-four a {
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 32px;
+  width: 33px;
+  text-align: center;
+  margin-right: 15px;
+  background-color: hsl(206, 94%, 87%);
+}
+.step-one a span,
+.step-two a span,
+.step-three a span,
+.step-four a span {
+  vertical-align: -webkit-baseline-middle;
+  font-weight: 700;
+}
+@media only screen and (max-width: 1024px) {
+  .step-one a,
+  .step-two a,
+  .step-three a,
+  .step-four a {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+}
+
+.step-two a,
+.step-three a,
+.step-four a {
+  background-color: unset;
+}
+.step-two a span,
+.step-three a span,
+.step-four a span {
+  color: hsl(231, 100%, 99%);
+}
+
+@media only screen and (max-width: 1024px) {
+  .step-one,
+  .step-two,
+  .step-three {
+    margin-right: 15px;
+  }
+}
+
+.number {
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+
+.cont {
+  font-weight: 700;
+  color: hsl(231, 100%, 99%);
+  letter-spacing: 1px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 73px);
+}
+@media only screen and (max-width: 1024px) {
+  .button-wrapper {
+    width: 100%;
+  }
+}
+.button-wrapper .back-step {
+  font-weight: 700;
+  color: hsl(231, 11%, 63%);
+  background: none;
   font-family: "Ubuntu", sans-serif;
-  padding-left: 10px;
-  border-radius: 8px;
-  border: 1px solid hsl(231, 11%, 63%);
+  border: none;
   font-size: 16px;
-  font-weight: bold;
-  color: hsl(213, 96%, 18%);
-  outline: none;
+  letter-spacing: 1px;
 }
-.form-content .first-info input:hover {
+.button-wrapper .back-step:hover {
   cursor: pointer;
 }
-.form-content .first-info input:focus {
-  border: 2px solid hsl(243, 100%, 62%);
-  cursor: text;
+.button-wrapper .footer-step {
+  padding: 14px 20px;
+  color: hsl(229, 24%, 87%);
+  background-color: hsl(213, 96%, 18%);
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
 }
-.form-content .first-info .name-input label {
-  display: block;
+.button-wrapper .footer-step:hover {
+  cursor: pointer;
+  color: hsl(231, 100%, 99%);
 }
-.form-content .first-info .phone-input label {
-  display: block;
+
+@media only screen and (max-width: 1024px) {
+  .form-content {
+    background-color: white;
+    width: 90%;
+    position: absolute;
+    top: 110px;
+    left: 5%;
+    border-radius: 10px;
+    padding-bottom: 35px;
+  }
 }
-.form-content .first-info .email-input label {
-  display: block;
+.form-content .first-info {
+  width: calc(100% - 142px);
+  margin-left: 55px;
+}
+.form-content .first-info h1 {
+  font-size: 33px;
+  margin: auto;
+  margin-top: 50px;
+  color: hsl(213, 96%, 18%);
+}
+.form-content .first-info .sub-title {
+  margin-top: 7px;
+  margin-bottom: 35px;
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+@media only screen and (max-width: 1032px) {
+  .form-content .first-info .sub-title {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .form-content .first-info {
+    width: calc(100% - 65px);
+    margin-left: 25px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .form-content .first-info h1 {
+    font-size: 26px;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .form-content .first-info .sub-title {
+    font-size: 15px;
+    line-height: 25px;
+  }
 }
 .form-content .first-info .name-input,
 .form-content .first-info .phone-input,
@@ -104,6 +278,34 @@ body {
 .form-content .first-info .email-input input:focus {
   border: 2px solid hsl(243, 100%, 62%);
   cursor: text;
+}
+.form-content .first-info .name-input input::-moz-placeholder, .form-content .first-info .phone-input input::-moz-placeholder, .form-content .first-info .email-input input::-moz-placeholder {
+  color: hsl(231, 11%, 63%);
+}
+.form-content .first-info .name-input input::placeholder,
+.form-content .first-info .phone-input input::placeholder,
+.form-content .first-info .email-input input::placeholder {
+  color: hsl(231, 11%, 63%);
+}
+@media only screen and (max-width: 1024px) {
+  .form-content .first-info .name-input,
+  .form-content .first-info .phone-input,
+  .form-content .first-info .email-input {
+    font-size: 14px;
+  }
+}
+.form-content .first-info .name-input label,
+.form-content .first-info .phone-input label,
+.form-content .first-info .email-input label {
+  display: block;
+}
+@media only screen and (max-width: 1024px) {
+  .form-content .first-info .name-input input,
+  .form-content .first-info .phone-input input,
+  .form-content .first-info .email-input input {
+    height: 40px;
+    font-size: 14px;
+  }
 }
 .form-content .second-info {
   width: calc(100% - 142px);
@@ -159,6 +361,7 @@ body {
 .fourth-info {
   width: calc(100% - 142px);
   margin-left: 55px;
+  width: calc(100% - 128px);
 }
 .fourth-info h1 {
   font-size: 33px;
@@ -180,6 +383,15 @@ body {
 
 .footer {
   margin-left: 55px;
+}
+@media only screen and (max-width: 1024px) {
+  .footer {
+    margin-left: unset;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+  }
 }
 
 .plan-holder {
@@ -322,8 +534,9 @@ body {
 }
 
 .summ-wrapper {
-  background-color: yellow;
-  padding: 1px 20px;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 8px;
+  padding: 1px 20px 5px 20px;
 }
 .summ-wrapper .summ-head p {
   font-size: 16px;
@@ -344,7 +557,7 @@ body {
 }
 .summ-wrapper .summ-line1 {
   margin-top: 20px;
-  border-top: 1px solid;
+  border-top: 1px solid hsl(231, 11%, 63%);
   padding-top: 5px;
   color: hsl(231, 11%, 63%);
   font-size: 14px;
@@ -376,90 +589,17 @@ body {
   font-weight: bolder;
 }
 
-.step-one,
-.step-two,
-.step-three,
-.step-four {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-}
-.step-one a,
-.step-two a,
-.step-three a,
-.step-four a {
-  grid-row: 1/3;
-}
-
-.step-one a,
-.step-two a,
-.step-three a,
-.step-four a {
-  border: 1px solid hsl(0, 0%, 100%);
-  border-radius: 32px;
-  width: 33px;
+.thanks-info {
+  display: block;
   text-align: center;
-  margin-right: 15px;
-  background-color: hsl(206, 94%, 87%);
+  margin-top: 130px;
 }
-.step-one a span,
-.step-two a span,
-.step-three a span,
-.step-four a span {
-  vertical-align: -webkit-baseline-middle;
-  font-weight: 700;
+.thanks-info h1 {
+  color: hsl(213, 96%, 18%);
 }
-
-.step-two a,
-.step-three a,
-.step-four a {
-  background-color: unset;
-}
-.step-two a span,
-.step-three a span,
-.step-four a span {
-  color: hsl(231, 100%, 99%);
-}
-
-.number {
+.thanks-info .thanks-desc {
   font-size: 14px;
   color: hsl(231, 11%, 63%);
-}
-
-.cont {
-  font-weight: 700;
-  color: hsl(231, 100%, 99%);
-  letter-spacing: 1px;
-}
-
-.button-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: calc(100% - 73px);
-}
-.button-wrapper .back-step {
-  font-weight: 700;
-  color: hsl(231, 11%, 63%);
-  background: none;
-  font-family: "Ubuntu", sans-serif;
-  border: none;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-.button-wrapper .back-step:hover {
-  cursor: pointer;
-}
-.button-wrapper .footer-step {
-  padding: 14px 20px;
-  color: hsl(229, 24%, 87%);
-  background-color: hsl(213, 96%, 18%);
-  letter-spacing: 1px;
-  outline: none;
-  border: none;
-  border-radius: 7px;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
-}
-.button-wrapper .footer-step:hover {
-  cursor: pointer;
-  color: hsl(231, 100%, 99%);
+  width: 55%;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */
