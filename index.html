@@ -20,22 +20,22 @@
         <div class="steps">
             <div class="step-wrapper">
                 <div class="step-one">
-                    <a><span>1</span></a>
+                    <a id="numCirc"><span id="numText">1</span></a>
                     <span class="number">STEP 1</span>
                     <span class="cont">YOUR INFO</span>
                 </div>
                 <div class="step-two">
-                    <a><span>2</span></a>
+                    <a id="numCirc"><span id="numText">2</span></a>
                     <span class="number">STEP 2</span>
                     <span class="cont">SELECT PLAN</span>
                 </div>
                 <div class="step-three">
-                    <a><span>3</span></a>
+                    <a id="numCirc"><span id="numText">3</span></a>
                     <span class="number">STEP 3</span>
                     <span class="cont">ADD-ONS</span>
                 </div>
                 <div class="step-four">
-                    <a><span>4</span></a>
+                    <a id="numCirc"><span id="numText">4</span></a>
                     <span class="number">STEP 4</span>
                     <span class="cont">SUMMARY</span>
                 </div>
@@ -174,9 +174,9 @@
 
 
         <div class="footer">
-            <div class="button-wrapper" style="display: flex;">
-                <button class="back-step">Go Back</button>
-                <button class="footer-step">Next Step</button>
+            <div class="button-wrapper" style="display: flex; justify-content: flex-end;">
+                <button class="back-step" style="display: none;" onclick="backPage()">Go Back</button>
+                <button class="footer-step" onclick="nextPage()">Next Step</button>
             </div>
         </div>
     </section>
