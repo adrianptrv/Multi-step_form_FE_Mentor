@@ -1,4 +1,5 @@
 "use strict";
+//Variable used for indicating the page we are on, by default it's 1
 var pageNum = 1;
 const myFirstPage = document.querySelector(".first-info");
 const mySecondPage = document.querySelector(".second-info");
@@ -9,7 +10,9 @@ const footerWrapper = document.querySelector(".button-wrapper");
 const backBtn = document.querySelector(".back-step");
 const stepsCircle = document.querySelectorAll("#numCirc");
 const stepsText = document.querySelectorAll("#numText");
+//Next button function
 function nextPage() {
+    //Check on which page we are currently
     if (pageNum == 1) {
         //Change Page
         myFirstPage.style.display = "none";
@@ -49,6 +52,7 @@ function nextPage() {
         footerWrapper.style.display = "none";
     }
 }
+//Back button function
 function backPage() {
     if (pageNum == 4) {
         myForthPage.style.display = "none";

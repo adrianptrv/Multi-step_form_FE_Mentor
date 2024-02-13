@@ -1,3 +1,4 @@
+//Variable used for indicating the page we are on, by default it's 1
 var pageNum: number = 1;
 
 const myFirstPage = document.querySelector<HTMLDivElement>(".first-info");
@@ -10,7 +11,9 @@ const backBtn = document.querySelector<HTMLButtonElement>(".back-step");
 const stepsCircle = document.querySelectorAll<HTMLAnchorElement>("#numCirc");
 const stepsText = document.querySelectorAll<HTMLSpanElement>("#numText");
 
+//Next button function
 function nextPage() {
+    //Check on which page we are currently
     if (pageNum == 1) {
         //Change Page
         myFirstPage!.style.display = "none";
@@ -51,6 +54,7 @@ function nextPage() {
     }
 }
 
+//Back button function
 function backPage() {
     if (pageNum == 4) {
         myForthPage!.style.display = "none";
