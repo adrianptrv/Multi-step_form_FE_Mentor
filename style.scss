@@ -219,8 +219,11 @@ body {
     display: flex;
     justify-content: space-between;
     width: calc(100% - 73px);
+
     @media only screen and (max-width: 1024px) {
-        width: 100%;
+        width: 90%;
+        padding: 12px 0px;
+        margin: auto;
     }
 
     .back-step {
@@ -298,7 +301,8 @@ body {
         .phone-input,
         .email-input {
             @include info-fields;
-            @media only screen and (max-width: 1024px){
+
+            @media only screen and (max-width: 1024px) {
                 font-size: 14px;
             }
 
@@ -307,9 +311,9 @@ body {
                 display: block;
             }
 
-            
-            input{
-                @media only screen and (max-width: 1024px){
+
+            input {
+                @media only screen and (max-width: 1024px) {
                     height: 40px;
                     font-size: 14px;
                 }
@@ -323,9 +327,30 @@ body {
         @include info-screens;
         width: calc(100% - 130px);
 
-        @media only screen and (min-width: 1020px) and (max-width: 1050px) {
+        @media only screen and (min-width: 1025px) and (max-width: 1050px) {
             width: calc(100% - 110px);
         }
+
+        @media only screen and (max-width: 1024px) {
+            width: calc(100% - 65px);
+            margin-left: 25px;
+        }
+
+
+        h1 {
+            @media only screen and (max-width: 1024px) {
+                font-size: 26px;
+                margin-top: 30px;
+            }
+        }
+
+        .sub-title {
+            @media only screen and (max-width: 1024px) {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+
     }
 
 
@@ -344,17 +369,21 @@ body {
 
 .footer {
     margin-left: 55px;
-    @media only screen and (max-width: 1024px){
+
+    @media only screen and (max-width: 1024px) {
         margin-left: unset;
-        position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
     }
 }
 
 .plan-holder {
     display: flex;
+    @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
 
     .arcade-plan,
     .advanced-plan,
@@ -362,6 +391,9 @@ body {
         width: 40%;
         border-radius: 10px;
         border: 2px solid hsl(229, 24%, 87%);
+        @media only screen and (max-width: 1024px){
+            width: 100%;
+        }
 
         &:hover {
             border-color: hsl(243, 100%, 62%);
@@ -371,24 +403,47 @@ body {
 
         img {
             margin: 20px 0 0 15px;
+            @media only screen and (max-width: 1024px) {
+                margin: 13px 0 0 15px;
+                vertical-align: top;
+            }
+        }
+
+        div {
+            @media only screen and (max-width: 1024px){
+                display: inline-block;
+                padding-bottom: 15px;
+            }
         }
 
         h4 {
             padding-right: 10px;
             margin: 34px 0 10px 15px;
             color: hsl(213, 96%, 18%);
+            @media only screen and (max-width: 1024px){
+                margin: 15px 0 5px 12px;
+            }
         }
 
         span {
             padding-right: 10px;
             margin-left: 15px;
             color: hsl(231, 11%, 63%);
+            @media only screen and (max-width: 1024px){
+                font-size: 15px;
+                margin-left: 12px;
+            }
         }
 
         p {
             margin: 10px 10px 20px 15px;
             color: hsl(213, 96%, 18%);
             font-weight: bold;
+            @media only screen and (max-width: 1024px){
+                font-size: 14px;
+                font-weight: 600;
+                margin: 6px 0 0px 12px;
+            }
         }
     }
 

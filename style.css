@@ -162,7 +162,9 @@ body {
 }
 @media only screen and (max-width: 1024px) {
   .button-wrapper {
-    width: 100%;
+    width: 90%;
+    padding: 12px 0px;
+    margin: auto;
   }
 }
 .button-wrapper .back-step {
@@ -329,9 +331,27 @@ body {
     margin-bottom: 20px;
   }
 }
-@media only screen and (min-width: 1020px) and (max-width: 1050px) {
+@media only screen and (min-width: 1025px) and (max-width: 1050px) {
   .form-content .second-info {
     width: calc(100% - 110px);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .form-content .second-info {
+    width: calc(100% - 65px);
+    margin-left: 25px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .form-content .second-info h1 {
+    font-size: 26px;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .form-content .second-info .sub-title {
+    font-size: 15px;
+    line-height: 25px;
   }
 }
 
@@ -387,7 +407,7 @@ body {
 @media only screen and (max-width: 1024px) {
   .footer {
     margin-left: unset;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: white;
@@ -397,12 +417,24 @@ body {
 .plan-holder {
   display: flex;
 }
+@media only screen and (max-width: 1024px) {
+  .plan-holder {
+    flex-direction: column;
+  }
+}
 .plan-holder .arcade-plan,
 .plan-holder .advanced-plan,
 .plan-holder .pro-plan {
   width: 40%;
   border-radius: 10px;
   border: 2px solid hsl(229, 24%, 87%);
+}
+@media only screen and (max-width: 1024px) {
+  .plan-holder .arcade-plan,
+  .plan-holder .advanced-plan,
+  .plan-holder .pro-plan {
+    width: 100%;
+  }
 }
 .plan-holder .arcade-plan:hover,
 .plan-holder .advanced-plan:hover,
@@ -415,12 +447,35 @@ body {
 .plan-holder .pro-plan img {
   margin: 20px 0 0 15px;
 }
+@media only screen and (max-width: 1024px) {
+  .plan-holder .arcade-plan img,
+  .plan-holder .advanced-plan img,
+  .plan-holder .pro-plan img {
+    margin: 13px 0 0 15px;
+    vertical-align: top;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .plan-holder .arcade-plan div,
+  .plan-holder .advanced-plan div,
+  .plan-holder .pro-plan div {
+    display: inline-block;
+    padding-bottom: 15px;
+  }
+}
 .plan-holder .arcade-plan h4,
 .plan-holder .advanced-plan h4,
 .plan-holder .pro-plan h4 {
   padding-right: 10px;
   margin: 34px 0 10px 15px;
   color: hsl(213, 96%, 18%);
+}
+@media only screen and (max-width: 1024px) {
+  .plan-holder .arcade-plan h4,
+  .plan-holder .advanced-plan h4,
+  .plan-holder .pro-plan h4 {
+    margin: 15px 0 5px 12px;
+  }
 }
 .plan-holder .arcade-plan span,
 .plan-holder .advanced-plan span,
@@ -429,12 +484,29 @@ body {
   margin-left: 15px;
   color: hsl(231, 11%, 63%);
 }
+@media only screen and (max-width: 1024px) {
+  .plan-holder .arcade-plan span,
+  .plan-holder .advanced-plan span,
+  .plan-holder .pro-plan span {
+    font-size: 15px;
+    margin-left: 12px;
+  }
+}
 .plan-holder .arcade-plan p,
 .plan-holder .advanced-plan p,
 .plan-holder .pro-plan p {
   margin: 10px 10px 20px 15px;
   color: hsl(213, 96%, 18%);
   font-weight: bold;
+}
+@media only screen and (max-width: 1024px) {
+  .plan-holder .arcade-plan p,
+  .plan-holder .advanced-plan p,
+  .plan-holder .pro-plan p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 6px 0 0px 12px;
+  }
 }
 .plan-holder .advanced-plan {
   margin: 0px 25px;
