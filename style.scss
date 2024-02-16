@@ -332,7 +332,7 @@ body {
         }
 
         @media only screen and (max-width: 1024px) {
-            width: calc(100% - 65px);
+            width: calc(100% - 50px);
             margin-left: 25px;
         }
 
@@ -353,19 +353,63 @@ body {
 
     }
 
+    .third-info {
+        @include info-screens;
+        width: calc(100% - 128px);
+
+
+        @media only screen and (max-width: 1024px) {
+            width: calc(100% - 51px);
+            margin-left: 25px;
+        }
+
+        h1 {
+            @media only screen and (max-width: 1024px) {
+                font-size: 26px;
+                margin-top: 30px;
+            }
+        }
+
+        .sub-title {
+            @media only screen and (max-width: 1024px) {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+
+    }
+
+    .fourth-info {
+        @include info-screens;
+        width: calc(100% - 128px);
+
+
+
+        @media only screen and (max-width: 1024px) {
+            width: calc(100% - 50px);
+            margin-left: 25px;
+        }
+
+
+        h1 {
+            @media only screen and (max-width: 1024px) {
+                font-size: 26px;
+                margin-top: 30px;
+            }
+        }
+
+        .sub-title {
+            @media only screen and (max-width: 1024px) {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+
+    }
 
 }
 
-.third-info {
-    @include info-screens;
-    width: calc(100% - 128px);
 
-}
-
-.fourth-info {
-    @include info-screens;
-    width: calc(100% - 128px);
-}
 
 .footer {
     margin-left: 55px;
@@ -381,6 +425,7 @@ body {
 
 .plan-holder {
     display: flex;
+
     @media only screen and (max-width: 1024px) {
         flex-direction: column;
     }
@@ -391,8 +436,9 @@ body {
         width: 40%;
         border-radius: 10px;
         border: 2px solid hsl(229, 24%, 87%);
-        @media only screen and (max-width: 1024px){
-            width: 100%;
+
+        @media only screen and (max-width: 1024px) {
+            width: 98%;
         }
 
         &:hover {
@@ -403,6 +449,7 @@ body {
 
         img {
             margin: 20px 0 0 15px;
+
             @media only screen and (max-width: 1024px) {
                 margin: 13px 0 0 15px;
                 vertical-align: top;
@@ -410,7 +457,7 @@ body {
         }
 
         div {
-            @media only screen and (max-width: 1024px){
+            @media only screen and (max-width: 1024px) {
                 display: inline-block;
                 padding-bottom: 15px;
             }
@@ -420,7 +467,8 @@ body {
             padding-right: 10px;
             margin: 34px 0 10px 15px;
             color: hsl(213, 96%, 18%);
-            @media only screen and (max-width: 1024px){
+
+            @media only screen and (max-width: 1024px) {
                 margin: 15px 0 5px 12px;
             }
         }
@@ -429,7 +477,8 @@ body {
             padding-right: 10px;
             margin-left: 15px;
             color: hsl(231, 11%, 63%);
-            @media only screen and (max-width: 1024px){
+
+            @media only screen and (max-width: 1024px) {
                 font-size: 15px;
                 margin-left: 12px;
             }
@@ -439,7 +488,8 @@ body {
             margin: 10px 10px 20px 15px;
             color: hsl(213, 96%, 18%);
             font-weight: bold;
-            @media only screen and (max-width: 1024px){
+
+            @media only screen and (max-width: 1024px) {
                 font-size: 14px;
                 font-weight: 600;
                 margin: 6px 0 0px 12px;
@@ -449,6 +499,10 @@ body {
 
     .advanced-plan {
         margin: 0px 25px;
+
+        @media only screen and (max-width: 1024px) {
+            margin: 10px 0;
+        }
     }
 
 }
@@ -533,6 +587,18 @@ body {
         margin-top: 15px;
     }
 
+    label[for=first-opt] .add-text h3, label[for=third-opt] .add-text h3{
+        @media only screen and (min-width: 408px) {
+            margin-top: 22px;
+        }
+    }
+    
+    label[for=second-opt] .add-text h3 {
+        @media only screen and (max-width: 1024px) {
+            margin-top: 22px;
+        }
+    }
+
     .add-block {
         display: flex;
         height: 75px;
@@ -552,6 +618,12 @@ body {
             margin: 28px 23px;
             width: 20px;
             height: 20px;
+            accent-color: hsl(243, 100%, 62%);
+
+            @media only screen and (max-width: 1024px) {
+                margin: 33px 14px;
+                width: 30px;
+            }
         }
 
         .add-text {
@@ -561,13 +633,28 @@ body {
                 color: hsl(213, 96%, 18%);
             }
 
+            h3:nth-child(2) {
+                margin-top: 22px;
+            }
+
             p {
                 font-size: 14px;
+                color: hsl(231, 11%, 63%);
+                margin-top: 5px;
+
+
             }
         }
 
         span {
             margin: 32px 25px 0 auto;
+
+            @media only screen and (max-width: 1024px) {
+                margin: 35px 12px 0 auto;
+                font-size: 14px;
+                color: hsl(243, 100%, 62%);
+                font-weight: bold;
+            }
         }
     }
 
@@ -596,6 +683,9 @@ body {
         span {
             float: right;
             margin-top: -15px;
+            @media only screen and (max-width: 1024px) {
+                margin-top: -10px;
+            }
             font-weight: bold;
             color: hsl(213, 96%, 18%);
         }
@@ -611,6 +701,10 @@ body {
         span {
             float: right;
             margin-top: -31px;
+            @media only screen and (max-width: 1024px) {
+                color: hsl(213, 96%, 18%);
+            }
+
         }
     }
 
@@ -627,6 +721,11 @@ body {
 
 .summ-total {
     padding: 1px 18px;
+
+    @media only screen and (max-width: 1024px){
+    position: relative;
+    top: 15px;
+    }
 
     p {
         color: hsl(231, 11%, 63%);
@@ -646,6 +745,15 @@ body {
     display: block;
     text-align: center;
     margin-top: 130px;
+    @media only screen and (max-width: 1024px) {
+        margin-top: 80px;
+    }
+
+    img{
+        @media only screen and (max-width: 1024px){
+            width: 55px;
+        }
+    }
 
     h1 {
         color: hsl(213, 96%, 18%);
@@ -656,5 +764,10 @@ body {
         color: hsl(231, 11%, 63%);
         width: 55%;
         margin: auto;
+        @media only screen and (max-width: 1024px){
+            width: 88%;
+            padding-bottom: 45px;
+            font-size: 16px;
+        }
     }
 }
