@@ -2,17 +2,6 @@
 
 This is my solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). 
 
-## Overview
-
-| Mobile layout                                                                                                               | Desktop layout                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/3f9b2a41-2f39-4ba9-93e9-b26c9a629970"  /> | <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/6c56cd74-5355-4f95-9704-cfbfcfa63464" /> |
-| <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/3f9b2a41-2f39-4ba9-93e9-b26c9a629970" />  | <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/6c56cd74-5355-4f95-9704-cfbfcfa63464" /> |
-
-
-
-
-
 ## The challenge
 
 The challenge is to create a responsive Multi-step form consisting of 3 pages for entering/selecting information, 1 page for summary and 1 thank you page.
@@ -46,5 +35,10 @@ Users should be able to:
 - SCSS
 - Typescript
 
+## Sreenshots
 
+| Mobile layout                                                                                                               | Desktop layout                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/3f9b2a41-2f39-4ba9-93e9-b26c9a629970"  /> | <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/6c56cd74-5355-4f95-9704-cfbfcfa63464" /> |
+| <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/3f9b2a41-2f39-4ba9-93e9-b26c9a629970" />  | <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/6c56cd74-5355-4f95-9704-cfbfcfa63464" /> |
 
