@@ -4,8 +4,9 @@ This is my solution to the [Multi-step form challenge on Frontend Mentor](https:
 
 ## Overview
 
-
-
+![Desktop_first](https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/6c56cd74-5355-4f95-9704-cfbfcfa63464)
+![Desktop_second](https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/fbceaef4-2a6a-4620-9d55-1c38f5b2c3b7)
+![Mobile](https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/3f9b2a41-2f39-4ba9-93e9-b26c9a629970)
 
 ## The challenge
 
