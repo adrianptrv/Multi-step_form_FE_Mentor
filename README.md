@@ -26,7 +26,7 @@ Users should be able to:
 ## My process
 
 1. Analyze the provided design pictures and build the HTML structure.
-2. Add all of the CSS styles, and make the website responsive.
+2. Add all of the CSS styles through SCSS, and make the website responsive.
 3. Add the functionality of the Multi-step form with Typescript.
 
 ## What I have used for building the project
