@@ -40,5 +40,5 @@ Users should be able to:
 | Mobile layout                                                                                                               | Desktop layout                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/3f9b2a41-2f39-4ba9-93e9-b26c9a629970"  /> | <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/6c56cd74-5355-4f95-9704-cfbfcfa63464" /> |
-| <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/3f9b2a41-2f39-4ba9-93e9-b26c9a629970" />  | <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/6c56cd74-5355-4f95-9704-cfbfcfa63464" /> |
+| <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/941d9b0e-d1f9-420d-a7f4-ccd2b98dc339" />  | <img src="https://github.com/adrianptrv/Multi-step_form_FE_Mentor/assets/99720888/45c97224-475c-4ae6-ad5b-03aa8b0982c5" /> |
 
