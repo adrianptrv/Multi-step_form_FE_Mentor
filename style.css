@@ -278,7 +278,7 @@ body {
 .form-content .first-info .name-input input:focus,
 .form-content .first-info .phone-input input:focus,
 .form-content .first-info .email-input input:focus {
-  border: 2px solid hsl(243, 100%, 62%);
+  border: 1px solid hsl(243, 100%, 62%);
   cursor: text;
 }
 .form-content .first-info .name-input input::-moz-placeholder, .form-content .first-info .phone-input input::-moz-placeholder, .form-content .first-info .email-input input::-moz-placeholder {
@@ -288,6 +288,36 @@ body {
 .form-content .first-info .phone-input input::placeholder,
 .form-content .first-info .email-input input::placeholder {
   color: hsl(231, 11%, 63%);
+}
+.form-content .first-info .name-input .err-reminder1, .form-content .first-info .name-input .err-reminder2, .form-content .first-info .name-input .err-reminder3, .form-content .first-info .name-input .err-valid-email,
+.form-content .first-info .phone-input .err-reminder1,
+.form-content .first-info .phone-input .err-reminder2,
+.form-content .first-info .phone-input .err-reminder3,
+.form-content .first-info .phone-input .err-valid-email,
+.form-content .first-info .email-input .err-reminder1,
+.form-content .first-info .email-input .err-reminder2,
+.form-content .first-info .email-input .err-reminder3,
+.form-content .first-info .email-input .err-valid-email {
+  display: none;
+  float: right;
+  margin: 0;
+  margin-top: -23px;
+  color: hsl(354, 84%, 57%);
+  font-weight: bold;
+}
+@media only screen and (max-width: 1024px) {
+  .form-content .first-info .name-input .err-reminder1, .form-content .first-info .name-input .err-reminder2, .form-content .first-info .name-input .err-reminder3, .form-content .first-info .name-input .err-valid-email,
+  .form-content .first-info .phone-input .err-reminder1,
+  .form-content .first-info .phone-input .err-reminder2,
+  .form-content .first-info .phone-input .err-reminder3,
+  .form-content .first-info .phone-input .err-valid-email,
+  .form-content .first-info .email-input .err-reminder1,
+  .form-content .first-info .email-input .err-reminder2,
+  .form-content .first-info .email-input .err-reminder3,
+  .form-content .first-info .email-input .err-valid-email {
+    font-size: 10px;
+    margin-top: -17px;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .form-content .first-info .name-input,
@@ -466,11 +496,15 @@ body {
 .plan-holder .plan-label:checked + label {
   border-color: yellow;
 }
-.plan-holder .arcade-plan:has(input[type=radio]:checked), .plan-holder .advanced-plan:has(input[type=radio]:checked), .plan-holder .pro-plan:has(input[type=radio]:checked) {
+.plan-holder .arcade-plan:has(input[type=radio]:checked),
+.plan-holder .advanced-plan:has(input[type=radio]:checked),
+.plan-holder .pro-plan:has(input[type=radio]:checked) {
   border-color: hsl(243, 100%, 62%);
   background-color: hsl(231, 100%, 99%);
 }
-.plan-holder #r1, .plan-holder #r2, .plan-holder #r3 {
+.plan-holder #r1,
+.plan-holder #r2,
+.plan-holder #r3 {
   display: none;
 }
 .plan-holder .arcade-plan,
@@ -568,6 +602,10 @@ body {
   .plan-holder .advanced-plan {
     margin: 10px 0;
   }
+}
+
+.err-border {
+  border-color: hsl(354, 84%, 57%) !important;
 }
 
 .mon-year {
@@ -754,16 +792,19 @@ body {
     color: hsl(213, 96%, 18%);
   }
 }
-.summ-wrapper .summ-line2, .summ-wrapper .summ-line3 {
+.summ-wrapper .summ-line2,
+.summ-wrapper .summ-line3 {
   color: hsl(231, 11%, 63%);
   font-size: 14px;
 }
-.summ-wrapper .summ-line2 span, .summ-wrapper .summ-line3 span {
+.summ-wrapper .summ-line2 span,
+.summ-wrapper .summ-line3 span {
   float: right;
   margin-top: -31px;
 }
 @media only screen and (max-width: 1024px) {
-  .summ-wrapper .summ-line2 span, .summ-wrapper .summ-line3 span {
+  .summ-wrapper .summ-line2 span,
+  .summ-wrapper .summ-line3 span {
     color: hsl(213, 96%, 18%);
   }
 }

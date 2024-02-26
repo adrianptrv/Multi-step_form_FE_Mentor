@@ -42,12 +42,25 @@
         }
 
         &:focus {
-            border: 2px solid hsl(243, 100%, 62%);
+            border: 1px solid hsl(243, 100%, 62%);
             cursor: text;
         }
 
         &::placeholder {
             color: hsl(231, 11%, 63%);
+        }
+    }
+
+    .err-reminder1, .err-reminder2, .err-reminder3, .err-valid-email  {
+        display: none;
+        float: right;
+        margin: 0;
+        margin-top: -23px;
+        color: hsl(354, 84%, 57%);
+        font-weight: bold;
+        @media only screen and (max-width: 1024px) {
+            font-size: 10px;
+            margin-top: -17px;
         }
     }
 }
@@ -75,8 +88,6 @@
     }
 }
 
-
-///////////
 
 
 body {
@@ -433,20 +444,26 @@ body {
     .plan-label {
         display: block;
         height: 112%;
+
         &:hover {
             cursor: pointer;
         }
     }
-    .plan-label:checked + label {
+
+    .plan-label:checked+label {
         border-color: yellow;
     }
 
-    .arcade-plan:has(input[type="radio"]:checked), .advanced-plan:has(input[type="radio"]:checked), .pro-plan:has(input[type="radio"]:checked) {
+    .arcade-plan:has(input[type="radio"]:checked),
+    .advanced-plan:has(input[type="radio"]:checked),
+    .pro-plan:has(input[type="radio"]:checked) {
         border-color: hsl(243, 100%, 62%);
         background-color: hsl(231, 100%, 99%);
     }
 
-    #r1, #r2, #r3 {
+    #r1,
+    #r2,
+    #r3 {
         display: none;
     }
 
@@ -530,6 +547,10 @@ body {
 
 }
 
+.err-border {
+    border-color: hsl(354, 84%, 57%) !important;
+}
+
 .mon-year {
     text-align: center;
     border-radius: 10px;
@@ -538,14 +559,16 @@ body {
     font-size: 16px;
     margin-top: 20px;
 
-.err-msg {
-    color: hsl(354, 84%, 57%);
-    font-size: 16px;
-    margin-top: 50px;
-    @media only screen and (max-width: 1024px) {
-       margin-top: 30px;
+
+    .err-msg {
+        color: hsl(354, 84%, 57%);
+        font-size: 16px;
+        margin-top: 50px;
+
+        @media only screen and (max-width: 1024px) {
+            margin-top: 30px;
+        }
     }
-}
 
     .mon-year-text {
         padding-top: 19px;
@@ -586,7 +609,7 @@ body {
             cursor: pointer;
         }
 
-  
+
 
         .switch label:after {
             content: '';
@@ -755,7 +778,8 @@ body {
         }
     }
 
-    .summ-line2, .summ-line3 {
+    .summ-line2,
+    .summ-line3 {
         color: hsl(231, 11%, 63%);
         font-size: 14px;
 
@@ -782,6 +806,7 @@ body {
         color: hsl(231, 11%, 63%);
         font-size: 16px;
         margin-top: 20px;
+
         @media only screen and (max-width: 1024px) {
             margin: 5px 0px;
         }
@@ -793,6 +818,7 @@ body {
         color: hsl(243, 100%, 62%);
         font-weight: bolder;
         font-size: 20px;
+
         @media only screen and (max-width: 1024px) {
             margin-top: -27px;
         }
@@ -836,7 +862,8 @@ body {
 .submit-page-next {
     background-color: hsl(243, 100%, 62%) !important;
     color: white;
-    &:hover { 
+
+    &:hover {
         background-color: rgb(156 151 255) !important;
         cursor: pointer;
     }

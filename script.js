@@ -18,30 +18,86 @@ function nextPage() {
     var _a, _b, _c, _d;
     //Check on which page we are currently
     if (pageNum == 1) {
-        //Change Page
-        myFirstPage.style.display = "none";
-        mySecondPage.style.display = "block";
-        // Display button
-        backBtn.style.display = "block";
-        footerWrapper.style.justifyContent = "space-between";
-        // Change circle style to the next page
-        stepsCircle[1].style.backgroundColor = "hsl(206, 94%, 87%)";
-        stepsText[1].style.color = "black";
-        stepsCircle[0].style.backgroundColor = "unset";
-        stepsText[0].style.color = "hsl(231, 100%, 99%)";
-        // Add plus one to the page counter
-        pageNum++;
+        //Get the input fields content
+        const nameV = document.querySelector("#name");
+        const emailV = document.querySelector("#email-add");
+        const phoneV = document.querySelector("#phone-num");
+        //Email format check
+        const corrEmail = /^\S+@\S+\.\S+$/.test(emailV.value);
+        //Check if the input fields are empty
+        if ((nameV === null || nameV === void 0 ? void 0 : nameV.value) === '' || (emailV === null || emailV === void 0 ? void 0 : emailV.value) === '' || (phoneV === null || phoneV === void 0 ? void 0 : phoneV.value) === '' || corrEmail == false) {
+            //Change styles if the input fields are empty
+            if ((nameV === null || nameV === void 0 ? void 0 : nameV.value) === '') {
+                nameV.classList.add("err-border");
+                document.querySelector(".err-reminder1").style.display = "inline";
+            }
+            else {
+                nameV === null || nameV === void 0 ? void 0 : nameV.classList.remove("err-border");
+                document.querySelector(".err-reminder1").style.display = "none";
+            }
+            if ((emailV === null || emailV === void 0 ? void 0 : emailV.value) === '') {
+                emailV.classList.add("err-border");
+                document.querySelector(".err-reminder2").style.display = "inline";
+                document.querySelector(".err-valid-email").style.display = "none";
+            }
+            //Change style if the email format is wrong
+            else if (corrEmail == false) {
+                emailV === null || emailV === void 0 ? void 0 : emailV.classList.add("err-border");
+                document.querySelector(".err-reminder2").style.display = "none";
+                document.querySelector(".err-valid-email").style.display = "inline";
+            }
+            else {
+                emailV === null || emailV === void 0 ? void 0 : emailV.classList.remove("err-border");
+                document.querySelector(".err-valid-email").style.display = "none";
+                document.querySelector(".err-reminder2").style.display = "none";
+            }
+            if ((phoneV === null || phoneV === void 0 ? void 0 : phoneV.value) === '') {
+                phoneV.classList.add("err-border");
+                document.querySelector(".err-reminder3").style.display = "inline";
+            }
+            else {
+                phoneV === null || phoneV === void 0 ? void 0 : phoneV.classList.remove("err-border");
+                document.querySelector(".err-reminder3").style.display = "none";
+            }
+        }
+        else {
+            //Check if any of the fields have left error class attached
+            if ((nameV === null || nameV === void 0 ? void 0 : nameV.classList.contains("err-border")) || (emailV === null || emailV === void 0 ? void 0 : emailV.classList.contains("err-border")) || (phoneV === null || phoneV === void 0 ? void 0 : phoneV.classList.contains("err-border"))) {
+                nameV === null || nameV === void 0 ? void 0 : nameV.classList.remove("err-border");
+                emailV === null || emailV === void 0 ? void 0 : emailV.classList.remove("err-border");
+                phoneV === null || phoneV === void 0 ? void 0 : phoneV.classList.remove("err-border");
+                document.querySelector(".err-reminder1").style.display = "none";
+                document.querySelector(".err-reminder2").style.display = "none";
+                document.querySelector(".err-reminder3").style.display = "none";
+                document.querySelector(".err-valid-email").style.display = "none";
+            }
+            //Change Page
+            myFirstPage.style.display = "none";
+            mySecondPage.style.display = "block";
+            // Display button
+            backBtn.style.display = "block";
+            footerWrapper.style.justifyContent = "space-between";
+            // Change circle style to the next page
+            stepsCircle[1].style.backgroundColor = "hsl(206, 94%, 87%)";
+            stepsText[1].style.color = "black";
+            stepsCircle[0].style.backgroundColor = "unset";
+            stepsText[0].style.color = "hsl(231, 100%, 99%)";
+            // Add plus one to the page counter
+            pageNum++;
+        }
     }
     else if (pageNum == 2) {
+        //Checking if a plan is selected
         if (((_a = document.querySelector("#r1")) === null || _a === void 0 ? void 0 : _a.checked) == false && ((_b = document.querySelector("#r2")) === null || _b === void 0 ? void 0 : _b.checked) == false && ((_c = document.querySelector("#r3")) === null || _c === void 0 ? void 0 : _c.checked) == false) {
-            document.querySelector(".arcade-plan").style.borderColor = "hsl(354, 84%, 57%)";
-            document.querySelector(".advanced-plan").style.borderColor = "hsl(354, 84%, 57%)";
-            document.querySelector(".pro-plan").style.borderColor = "hsl(354, 84%, 57%)";
+            //If a plan is not selected a red error border is added to the elements
+            document.querySelector(".arcade-plan").classList.add("err-border");
+            document.querySelector(".advanced-plan").classList.add("err-border");
+            document.querySelector(".pro-plan").classList.add("err-border");
             document.querySelector(".err-msg").style.display = "block";
             setTimeout(() => {
-                document.querySelector(".arcade-plan").style.borderColor = "unset";
-                document.querySelector(".advanced-plan").style.borderColor = "unset";
-                document.querySelector(".pro-plan").style.borderColor = "unset";
+                document.querySelector(".arcade-plan").classList.remove("err-border");
+                document.querySelector(".advanced-plan").classList.remove("err-border");
+                document.querySelector(".pro-plan").classList.remove("err-border");
                 document.querySelector(".err-msg").style.display = "none";
             }, 2000);
         }
