@@ -150,14 +150,8 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
-  .step-one #numText {
+  .step-one #numText, .step-four #numText {
     margin-left: -1px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .step-four #numText {
-    margin-left: -2px;
   }
 }
 
@@ -911,4 +905,7 @@ body {
 .submit-page-next:hover {
   background-color: rgb(156, 151, 255) !important;
   cursor: pointer;
+}
+.submit-page-next:focus {
+  background-color: hsl(243, 100%, 62%) !important;
 }/*# sourceMappingURL=style.css.map */

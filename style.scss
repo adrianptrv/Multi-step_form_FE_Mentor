@@ -222,20 +222,14 @@ body {
     }
 }
 
-.step-one {
+.step-one, .step-four {
     @media only screen and (max-width: 1024px) {
         #numText {
             margin-left: -1px;
         }
     }
 }
-.step-four {
-    @media only screen and (max-width: 1024px) {
-        #numText {
-            margin-left: -2px;
-        }
-    }
-}
+
 
 .number {
     font-size: 14px;
@@ -906,4 +900,10 @@ body {
         background-color: rgb(156 151 255) !important;
         cursor: pointer;
     }
+
+    &:focus {
+        background-color: hsl(243, 100%, 62%) !important
+    }
+
+
 }
