@@ -13,6 +13,16 @@ const stepsCircle = document.querySelectorAll("#numCirc");
 const stepsText = document.querySelectorAll("#numText");
 const footerNext = document.querySelector(".footer-step");
 var sum1;
+//Make input text be submitted with Enter key
+[document.querySelector("#name"), document.querySelector("#email-add"), document.querySelector("#phone-num")].forEach(item => {
+    item === null || item === void 0 ? void 0 : item.addEventListener('keypress', event => {
+        var _a;
+        if (event.key === "Enter") {
+            event.preventDefault();
+            (_a = document.querySelector(".footer-step")) === null || _a === void 0 ? void 0 : _a.click();
+        }
+    });
+});
 //Next button function
 function nextPage() {
     var _a, _b, _c, _d;
