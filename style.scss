@@ -51,13 +51,17 @@
         }
     }
 
-    .err-reminder1, .err-reminder2, .err-reminder3, .err-valid-email  {
+    .err-reminder1,
+    .err-reminder2,
+    .err-reminder3,
+    .err-valid-email {
         display: none;
         float: right;
         margin: 0;
         margin-top: -23px;
         color: hsl(354, 84%, 57%);
         font-weight: bold;
+
         @media only screen and (max-width: 1024px) {
             font-size: 10px;
             margin-top: -17px;
@@ -94,6 +98,10 @@ body {
     margin: unset;
     font-family: 'Ubuntu', sans-serif;
     background-color: hsl(217, 100%, 97%);
+
+    @media only screen and (max-width: 1024px) {
+        height: 800px;
+    }
 }
 
 
@@ -188,7 +196,7 @@ body {
         @media only screen and (max-width: 1024px) {
             width: 38px;
             height: 38px;
-            font-size: 18px;
+            font-size: 20px;
         }
     }
 }
@@ -214,6 +222,20 @@ body {
     }
 }
 
+.step-one {
+    @media only screen and (max-width: 1024px) {
+        #numText {
+            margin-left: -1px;
+        }
+    }
+}
+.step-four {
+    @media only screen and (max-width: 1024px) {
+        #numText {
+            margin-left: -2px;
+        }
+    }
+}
 
 .number {
     font-size: 14px;
@@ -566,7 +588,7 @@ body {
         margin-top: 50px;
 
         @media only screen and (max-width: 1024px) {
-            margin-top: 30px;
+            margin-top: 29px;
         }
     }
 
@@ -666,6 +688,10 @@ body {
         background-color: hsl(231, 100%, 99%);
     }
 
+    .add-block:has(input[type="checkbox"]:not(:checked)) {
+        border-color: hsl(229, 24%, 87%);
+    }
+
     .add-block {
         display: flex;
         height: 75px;
@@ -708,10 +734,12 @@ body {
                 font-size: 14px;
                 color: hsl(231, 11%, 63%);
                 margin-top: 5px;
-
-
             }
+
+
         }
+
+
 
         span {
             margin: 32px 25px 0 auto;
@@ -723,6 +751,17 @@ body {
                 font-size: 14px;
             }
         }
+    }
+
+    .add-block:nth-child(1) {
+        .add-text {
+            @media only screen and (max-width: 1024px) {
+                p {
+                    padding-right: 10px;
+                }
+            }
+        }
+
     }
 
 }

@@ -14,6 +14,16 @@ const footerNext = document.querySelector<HTMLElement>(".footer-step");
 
 var sum1: number;
 
+//Make input text be submitted with Enter key
+[document.querySelector<HTMLInputElement>("#name"), document.querySelector<HTMLInputElement>("#email-add"), document.querySelector<HTMLInputElement>("#phone-num")].forEach(item => {
+    item?.addEventListener('keypress', event => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.querySelector<HTMLButtonElement>(".footer-step")?.click();
+          }
+    })
+  })
+
 //Next button function
 function nextPage() {
     //Check on which page we are currently
