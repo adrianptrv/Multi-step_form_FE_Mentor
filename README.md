@@ -33,7 +33,7 @@ Users should be able to:
 
 - HTML
 - SCSS
-- Typescript
+- TypeScript
 
 ## Sreenshots
 
